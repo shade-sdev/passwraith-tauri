@@ -43,3 +43,4 @@ Thumbs.db
 
 # Project exclude paths
 /src-tauri/migration/target/
+/src-tauri/entity/target/
