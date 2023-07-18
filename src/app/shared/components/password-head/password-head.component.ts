@@ -7,13 +7,6 @@ import {PasswordModel} from "../../../core/models/password-model";
     styleUrls: ['./password-head.component.css']
 })
 export class PasswordHeadComponent {
-    @Input() passwords?: Array<PasswordModel> = [
-        {
-            id: 1,
-            username: 'Shade',
-            website: 'Adobe',
-            website_icon_url: 'https://cdn-icons-png.flaticon.com/128/888/888835.png'
-        }
-    ];
+    @Input() passwords?: Array<PasswordModel> = [];
     @Input() totalElements?: number;
 }
