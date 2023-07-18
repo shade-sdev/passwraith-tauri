@@ -1,4 +1,4 @@
-<div class="lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col overflow-hidden bg-gray-900">
+<div class="lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col overflow-hidden bg-passwraith-main">
     <div class="flex-grow flex-col gap-y-5 overflow-y-auto px-6">
         <div class="flex h-16 shrink-0 items-center">
             <img class="h-8 w-auto" [src]="sideBar.appIconUrl" alt="Your Company">
@@ -8,7 +8,7 @@
                 <div *ngIf="side.type === SideBarTye.SUB" class="text-xs font-bold leading-6 text-gray-400">{{side.title}}</div>
                 <li *ngFor="let child of side.children">
                     <a [routerLink]="child.url"
-                       class="bg-gray-900 hover:bg-gray-800 text-white group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
+                       class="bg-passwraith-semi hover:bg-passwraith-secondary text-white group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
                         <ng-icon *ngIf="side.type === SideBarTye.MAIN" [name]="child.icon" size="1.3rem"
                                  class="text-gray-400 group-hover:text-gray-500 mr-3 h-6 w-6 flex-shrink-0"></ng-icon>
                         <span *ngIf="side.type === SideBarTye.SUB"

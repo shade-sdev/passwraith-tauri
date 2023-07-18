@@ -39,7 +39,6 @@
         "resizable": true,
         "title": "passwraith",
         "width": 1200,
-        "min-width": 1200,
         "height": 680
       }
     ]

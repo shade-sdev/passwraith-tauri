@@ -1,8 +1,8 @@
 import {Injectable} from '@angular/core';
-import {PasswordModel} from "../models/PasswordModel";
 import {invoke} from "@tauri-apps/api/tauri";
 import {fromPromise} from "rxjs/internal/observable/innerFrom";
 import {Observable} from "rxjs";
+import {PasswordModel} from "../models/password-model";
 
 @Injectable()
 export class PasswordService {
