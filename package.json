@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "tauri": "tauri",
-    "run": "pnpm tauri dev"
+    "run": "pnpm tauri dev",
+    "build-tauri": "tauri build"
   },
   "private": true,
   "dependencies": {
