@@ -1,8 +1,14 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
+use crate::repository::PasswordRepository;
+
 mod command;
 mod model;
 pub(crate) mod repository;
+
+pub struct AppState {
+    pub(crate) repo: PasswordRepository,
+}
 
 #[tauri::command]
 fn greet(name: &str) -> String {
@@ -12,7 +18,13 @@ fn greet(name: &str) -> String {
 #[tokio::main]
 async fn main() {
     repository::init_migrations().await;
+
+    let app_state = AppState {
+        repo: PasswordRepository::new().await,
+    };
+
     tauri::Builder::default()
+        .manage(app_state)
         .invoke_handler(tauri::generate_handler![
             greet,
             command::find_all,
